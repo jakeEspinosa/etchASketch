@@ -6,7 +6,7 @@ for (let i = 1; i < 17; i++) {
   gridDiv.appendChild(newRow);
 }
 
-let nodeList = gridDiv.querySelectorAll('.row');
+const nodeList = gridDiv.querySelectorAll('.row');
 
 for (const child of nodeList) {
   for (i = 1; i < 17; i++) {
@@ -15,3 +15,11 @@ for (const child of nodeList) {
     child.appendChild(newBox);
   }
 }
+
+const boxes = document.querySelectorAll('.square');
+
+boxes.forEach(box => {
+  box.addEventListener('mouseover', (hoveredBox) => {
+    hoveredBox.currentTarget.classList.add('hoveredOver');
+  });
+});

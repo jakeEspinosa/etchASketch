@@ -7,3 +7,7 @@
   width: 20px;
   border: 2px solid black;
 }
+
+.hoveredOver {
+  background-color: black;
+}
