@@ -22,6 +22,8 @@ function populateRows(squares) {
   }
 }
 
+
+
 function etchASketch() {
   const boxes = document.querySelectorAll('.square');
 
@@ -36,6 +38,12 @@ function initializeGrid(size) {
   createRows(size);
   populateRows(size);
   etchASketch();
+}
+
+function clearGrid() {
+  while (gridDiv.firstChild) {
+    gridDiv.removeChild(gridDiv.firstChild);
+  }
 }
 
 initializeGrid(16);
