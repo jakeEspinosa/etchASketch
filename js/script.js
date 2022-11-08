@@ -1,4 +1,10 @@
-
+function resizeGrid() {
+  let gridSize = parseInt(prompt('What size would you like the grid to be?'));
+  if (gridSize <= 100) {
+    clearGrid();
+    initializeGrid(gridSize);
+  }
+}
 
 const gridDiv = document.getElementById('grid-div');
 
@@ -21,8 +27,6 @@ function populateRows(squares) {
     }
   }
 }
-
-
 
 function etchASketch() {
   const boxes = document.querySelectorAll('.square');
