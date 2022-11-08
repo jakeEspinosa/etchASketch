@@ -1,11 +1,3 @@
-function resizeGrid() {
-  let gridSize = parseInt(prompt('What size would you like the grid to be?'));
-  if (gridSize <= 100) {
-    clearGrid();
-    initializeGrid(gridSize);
-  }
-}
-
 const gridDiv = document.getElementById('grid-div');
 
 function createRows(rows){
@@ -47,6 +39,19 @@ function initializeGrid(size) {
 function clearGrid() {
   while (gridDiv.firstChild) {
     gridDiv.removeChild(gridDiv.firstChild);
+  }
+}
+
+function resizeGrid() {
+  while (true) {
+    let gridSize = parseInt(prompt('What size would you like the grid to be?'));
+    if (gridSize <= 100) {
+      clearGrid();
+      initializeGrid(gridSize);
+      break;
+    } else {
+      alert('Please enter a number less than or equal to 100!');
+    }
   }
 }
 
