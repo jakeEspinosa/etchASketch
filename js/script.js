@@ -45,12 +45,12 @@ function clearGrid() {
 function resizeGrid() {
   while (true) {
     let gridSize = parseInt(prompt('What size would you like the grid to be?'));
-    if (gridSize <= 100) {
+    if (gridSize <= 75) {
       clearGrid();
       initializeGrid(gridSize);
       break;
     } else {
-      alert('Please enter a number less than or equal to 100!');
+      alert('Please enter a number less than or equal to 75!');
     }
   }
 }
