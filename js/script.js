@@ -55,8 +55,18 @@ function resizeGrid() {
   }
 }
 
+function resetGrid() {
+  const boxes = document.querySelectorAll('.square');
+
+  boxes.forEach(box => {
+    box.classList.remove('hoveredOver')
+  });
+}
+
 initializeGrid(16);
 
 const resizeButton = document.querySelector('#resize');
-
 resizeButton.addEventListener('click', resizeGrid);
+
+const clearButton = document.querySelector('#clear');
+clearButton.addEventListener('click', resetGrid)
