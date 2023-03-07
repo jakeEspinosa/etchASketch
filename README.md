@@ -1,4 +1,4 @@
-<h1>Etch-A-Skecth</h1>
+<h1>Etch-A-Sketch</h1>
 
 <h2><a href="https://jakeespinosa.github.io/etchASketch"/>Check Out The Live Project!</a></h2>
 
